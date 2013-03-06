@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load url from future %}
+
+{% block content %}
+    <ul>
+        {% for host in hosts %}
+            <li><a href={% url 'coal.views.host' host %}>{{ host }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
